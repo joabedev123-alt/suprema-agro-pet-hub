@@ -6,6 +6,7 @@ import About from "@/components/About";
 import CtaSection from "@/components/CtaSection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
@@ -17,6 +18,7 @@ const Index = () => (
     <CtaSection />
     <Contact />
     <Footer />
+    <FloatingWhatsApp />
   </div>
 );
 

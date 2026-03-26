@@ -14,9 +14,13 @@ const Footer = () => (
         <a href="#produtos" className="text-muted-foreground hover:text-primary transition-colors">Produtos</a>
         <a href="#contato" className="text-muted-foreground hover:text-primary transition-colors">Contato</a>
       </nav>
-      <div className="text-center md:text-right text-xs text-muted-foreground space-y-1">
+      <div className="text-center md:text-right text-xs text-muted-foreground space-y-2">
         <p>© {new Date().getFullYear()} Todos os direitos reservados</p>
-        <p>Desenvolvido por Fabiano Jr Distribuidora</p>
+        <p>
+          <a href="https://camaly.com.br/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-semibold block md:inline">
+            Produzida com 💛 por CAMALY
+          </a>
+        </p>
       </div>
     </div>
   </footer>

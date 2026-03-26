@@ -13,21 +13,21 @@ const highlights = [
 const Hero = () => (
   <section id="inicio" className="pt-24 md:pt-32 pb-16 md:pb-24">
     <div className="container grid md:grid-cols-2 gap-10 items-center">
-      <div className="space-y-6">
-        <h1 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl leading-tight">
+      <div className="space-y-6 text-center md:text-left">
+        <h1 className="font-heading font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
           <span className="text-gradient-gold">🐾 Tudo para seu Pet</span>
           <br />
           <span className="text-foreground">e para o Agro em um só lugar</span>
         </h1>
-        <p className="text-muted-foreground text-lg max-w-lg">
+        <p className="text-muted-foreground text-lg max-w-lg mx-auto md:mx-0">
           Rações, casinhas, medicamentos e produtos essenciais com qualidade e preço justo. Atendemos online e na sua região.
         </p>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-gold text-primary-foreground font-heading font-bold px-8 py-3.5 rounded-lg shadow-gold hover:opacity-90 transition-opacity animate-pulse-glow"
+            className="flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground font-heading font-bold px-8 py-3.5 rounded-lg shadow-gold hover:opacity-90 transition-opacity animate-pulse-glow"
           >
             🟢 Comprar pelo WhatsApp
           </a>
