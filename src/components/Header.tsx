@@ -25,11 +25,11 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="container flex items-center justify-between h-16 md:h-20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+      <div className="container flex items-center justify-between h-14 md:h-20 px-4 md:px-6">
         <a href="#inicio" className="flex items-center gap-2">
-          <PawPrint className="w-7 h-7 md:w-8 md:h-8 text-primary" />
-          <span className="font-heading font-bold text-base sm:text-lg md:text-xl text-foreground whitespace-nowrap">
+          <PawPrint className="w-6 h-6 md:w-8 md:h-8 text-primary" />
+          <span className="font-heading font-bold text-sm sm:text-base md:text-xl text-foreground whitespace-nowrap">
             Suprema <span className="text-gradient-gold">Pet</span>
           </span>
         </a>
@@ -58,7 +58,7 @@ const Header = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-foreground"
+          className="md:hidden text-foreground p-2 rounded-lg hover:bg-secondary transition-colors"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
@@ -68,14 +68,14 @@ const Header = () => {
 
       {/* Mobile nav */}
       {open && (
-        <nav className="md:hidden bg-background border-b border-border pb-4">
-          <div className="container flex flex-col gap-4">
+        <nav className="md:hidden bg-background/98 border-b border-border">
+          <div className="container flex flex-col gap-1 px-4 py-3">
             {navLinks.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                className="text-muted-foreground hover:text-primary transition-colors font-medium py-3 text-base border-b border-border/50 last:border-0"
               >
                 {l.label}
               </a>
@@ -84,7 +84,8 @@ const Header = () => {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground font-heading font-semibold px-5 py-2.5 rounded-lg text-center hover:opacity-90 transition-opacity"
+              onClick={() => setOpen(false)}
+              className="flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground font-heading font-semibold px-5 py-3 rounded-lg text-center hover:opacity-90 transition-opacity mt-2"
             >
               <WhatsAppIcon className="w-5 h-5" />
               <span>Fale no WhatsApp</span>

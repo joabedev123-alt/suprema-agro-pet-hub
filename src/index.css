@@ -48,15 +48,32 @@
 @layer base {
   * {
     @apply border-border;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
   }
 
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+  }
+
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
